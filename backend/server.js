@@ -3,6 +3,7 @@ const express = require("express");
 //const cors = require("cors");
 const exerciseRoute = require("./routes/exercise");
 const userRoute = require("./routes/users");
+const workRoute = require("./routes/work")
 //const mongoose = require("mongoose");
 //require('dotenv').config();
 
@@ -23,7 +24,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true})
 */
 app.use('/exercises',exerciseRoute);
 app.use('/users',userRoute);
-
+app.use('/work',workRoute);
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
